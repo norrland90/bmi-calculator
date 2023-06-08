@@ -1,0 +1,67 @@
+/* FONTS */
+@font-face {
+  font-family: 'Inter';
+  src: url('resources/fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CUSTOM PROPERTIES */
+
+:root {
+  /* Colors */
+  --clr-text-dark: rgba(94, 110, 133, 1);
+  --clr-text-darker: rgba(37, 51, 81, 1);
+  --clr-light: rgba(255, 255, 255, 1);
+  --clr-accent: rgba(52, 95, 246, 1);
+  --clr-borders: rgba(216, 226, 231, 1);
+
+  /* Fonts */
+  --ff-primary: 'Inter', sans-serif;
+
+  --fw-light: 300;
+  --fw-reg: 400;
+  --fw-semibold: 600;
+
+  /* Font Size Mobile */
+  --fs-body-s: 0.875rem;
+  --fs-body-m: 1rem;
+  --fs-heading-s: 1.25rem;
+  --fs-heading-m: 1.5rem;
+  --fs-heading-l: 2rem;
+  --fs-heading-xl: 3rem;
+
+  /* Ev. lägga till padding som custom prop. + media queries */
+}
+
+/* Desktop font sizes */
+@media (min-width: 1100px) {
+  :root {
+    --fs-heading-l: 3rem;
+    --fs-heading-xl: 4rem;
+  }
+}
+
+/* GENERAL */
+
+body {
+  background-color: var(--clr-light);
+  font-family: var(--ff-primary);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
