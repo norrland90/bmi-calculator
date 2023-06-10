@@ -8,6 +8,90 @@
     <title>BMI Calculator</title>
   </head>
   <body>
-    <main></main>
+    <main>
+      <section class="hero">
+        <div class="hero__main-container">
+          <div class="hero__heading-container">
+            <img src="./resources/images/logo.svg" alt="" class="hero__logo" />
+            <h1 class="hero__heading">Body Mass Index Calculator</h1>
+            <p class="hero__paragraph">
+              Better understand your weight in relation to your height using our
+              body mass index (BM) calculator. While BMI is not the sole
+              determinant of a healthy weight, it offers a valuable starting
+              point to evaluate your overall health and well-being.
+            </p>
+          </div>
+          <div class="form__container">
+            <h2 class="form__heading">Enter your details below</h2>
+            <form class="form">
+              <div class="form__radio-buttons">
+                <div>
+                  <input
+                    type="radio"
+                    id="metric"
+                    class="form__radio-btn"
+                    name="measure-system"
+                    value="metric"
+                    checked
+                  />
+                  <label for="metric" class="form__radio-label">Metric</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="imperial"
+                    class="form__radio-btn"
+                    name="measure-system"
+                    value="Imperial"
+                  />
+                  <label for="imperial" class="form__radio-label"
+                    >Imperial</label
+                  >
+                </div>
+              </div>
+              <div class="form__numbers">
+                <div>
+                  <label for="height" class="form__number-label">Height</label>
+                  <div class="form__input-container">
+                    <input
+                      type="number"
+                      id="height"
+                      class="form__number-input"
+                      name="height"
+                      placeholder="0"
+                      min="0"
+                    />
+                    <p class="form__unit">cm</p>
+                  </div>
+                </div>
+                <div>
+                  <label for="weight" class="form__number-label">Weight</label>
+                  <div class="form__input-container">
+                    <input
+                      type="number"
+                      id="weight"
+                      class="form__number-input"
+                      name="weight"
+                      placeholder="0"
+                      min="0"
+                    />
+                    <p class="form__unit">kg</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="form__results">
+              <div class="form__result-container">
+                <!-- Needs to be container for showing results and using flexbox -->
+                <h3 class="form__results-heading">Welcome!</h3>
+              </div>
+              <p class="form__result-info">
+                Enter your height and weight and you’ll see your BMI result here
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

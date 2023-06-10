@@ -17,11 +17,13 @@
 
 :root {
   /* Colors */
-  --clr-text-dark: rgba(94, 110, 133, 1);
-  --clr-text-darker: rgba(37, 51, 81, 1);
+  --clr-text-semidark: rgba(94, 110, 133, 1);
+  --clr-text-dark: rgba(37, 51, 81, 1);
   --clr-light: rgba(255, 255, 255, 1);
   --clr-accent: rgba(52, 95, 246, 1);
+  --clr-accent-transparent: rgba(52, 95, 246, 0.15);
   --clr-borders: rgba(216, 226, 231, 1);
+  --clr-shadow: rgba(143, 174, 207, 0.25);
 
   /* Fonts */
   --ff-primary: 'Inter', sans-serif;
@@ -37,6 +39,12 @@
   --fs-heading-m: 1.5rem;
   --fs-heading-l: 2rem;
   --fs-heading-xl: 3rem;
+
+  /* Other */
+  --border-radius-l: 2rem;
+  --border-radius-m: 1rem;
+  --border-radius-s: 0.75rem;
+  --box-shadow-primary: 16px 32px 56px var(--clr-shadow);
 
   /* Ev. lägga till padding som custom prop. + media queries */
 }
@@ -65,3 +73,254 @@ section {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+/* HERO SECTION */
+
+.hero__main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 10rem auto;
+}
+
+.hero__heading-container {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+
+  background: linear-gradient(
+    135deg,
+    hsla(184, 95%, 92%, 0),
+    hsla(216, 95%, 92%, 1)
+  );
+  padding: 2rem;
+  padding-bottom: 12rem;
+  border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+
+  text-align: center;
+}
+
+.hero__logo {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.hero__heading {
+  max-width: 10ch;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+  font-size: var(--fs-heading-xl);
+  color: var(--clr-text-dark);
+  line-height: 1.1;
+}
+
+.hero__paragraph {
+  max-width: 60ch;
+  margin: 0 auto;
+  color: var(--clr-text-semidark);
+  line-height: 1.5;
+}
+
+@media (min-width: 1100px) {
+  .hero {
+    padding: 0 6rem 0 1rem; /* Section padding - behöver hålla koll på detta så det blir rätt - ej samma överallt */
+  }
+
+  .hero__main-container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(30rem, auto);
+    align-items: center;
+  }
+
+  .hero__heading-container {
+    padding: 2rem 0 2rem 5rem;
+
+    text-align: left;
+
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 10;
+    align-self: stretch;
+  }
+
+  .hero__logo {
+    margin: 0;
+    margin-bottom: 6rem;
+  }
+
+  .hero__heading {
+    max-width: 10ch;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .hero__heading {
+    max-width: 14ch;
+  }
+
+  .hero__paragraph {
+    margin: 0;
+    margin-bottom: 6rem;
+  }
+}
+
+/* Form */
+
+.form__container {
+  grid-row: 2 / span 2;
+  grid-column: 1 / span 2;
+
+  background-color: var(--clr-light);
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1rem;
+
+  border-radius: var(--border-radius-m);
+  box-shadow: var(--box-shadow-primary);
+}
+
+.form__heading {
+  margin-bottom: 1rem;
+  font-size: var(--fs-heading-m);
+}
+
+.form__radio-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin-bottom: 1rem;
+}
+
+.form__radio-buttons div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form__radio-label {
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semibold);
+}
+
+.form__numbers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.form__input-container {
+  display: grid;
+  grid-template-columns: 1fr 4rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form__number-label {
+  display: block;
+  margin-bottom: 0.5rem;
+
+  color: var(--clr-text-semidark);
+  font-size: var(--fs-body-s);
+}
+
+.form__number-input {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+
+  width: 100%;
+  height: 100%;
+  padding: 1rem 4rem 1rem 1rem;
+
+  font-size: var(--fs-heading-s);
+  font-weight: var(--fw-semibold);
+
+  outline: 0;
+  border: 1px solid var(--clr-borders);
+  border-radius: var(--border-radius-s);
+}
+
+.form__number-input:focus {
+  border-color: var(--clr-accent);
+}
+
+.form__unit {
+  grid-column: 2 / span 1;
+  grid-row: 1;
+
+  padding: 0 1rem;
+
+  font-size: var(--fs-heading-s);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-accent);
+  text-align: center;
+}
+
+.form__results {
+  padding: 1.5rem;
+
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+  border-radius: var(--border-radius-m);
+}
+
+.form__results-heading {
+  font-size: var(--fs-heading-m);
+  margin-bottom: 1rem;
+}
+
+.form__result-info {
+  font-size: var(--fs-body-s);
+}
+
+/* Radio buttons styles */
+
+.form__radio-btn {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--clr-borders);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.form__radio-btn::before {
+  content: '';
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: var(--clr-accent);
+  outline: 0.4rem solid var(--clr-accent-transparent);
+}
+
+.form__radio-btn:checked {
+  border: 0;
+}
+
+.form__radio-btn:checked::before {
+  transform: scale(1);
+}
+
+@media (min-width: 700px) {
+  .form__numbers {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form__results {
+    border-radius: var(--border-radius-m) 5rem 5rem var(--border-radius-m);
+  }
+}
+
+@media (min-width: 1100px) {
+  .form__container {
+    grid-row: 1 / span 1;
+    grid-column: 9 / span 5;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* Obs: nästa sektion - börja med overall layout så det blir korrekt och tydligt på alla skärmstorleket - blir lättare att hålla koll */
