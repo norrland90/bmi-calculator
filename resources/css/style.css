@@ -209,6 +209,22 @@ section {
   margin-bottom: 1rem;
 }
 
+.form__number--imperial div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+}
+
+.form__number--imperial label {
+  display: grid;
+  grid-column: 1 / span 2;
+}
+
+.form__numbers.hidden {
+  /* higher specificity than .hidden */
+  display: none;
+}
+
 .form__input-container {
   display: grid;
   grid-template-columns: 1fr 4rem;
@@ -305,7 +321,7 @@ section {
 }
 
 @media (min-width: 700px) {
-  .form__numbers {
+  .form__numbers--metric {
     grid-template-columns: 1fr 1fr;
   }
 

@@ -49,15 +49,17 @@
                   >
                 </div>
               </div>
-              <div class="form__numbers">
+              <div class="form__numbers form__number--metric">
                 <div>
-                  <label for="height" class="form__number-label">Height</label>
+                  <label for="height-cm" class="form__number-label"
+                    >Height</label
+                  >
                   <div class="form__input-container">
                     <input
                       type="number"
-                      id="height"
+                      id="height-cm"
                       class="form__number-input"
-                      name="height"
+                      name="height-cm"
                       placeholder="0"
                       min="0"
                     />
@@ -65,17 +67,75 @@
                   </div>
                 </div>
                 <div>
-                  <label for="weight" class="form__number-label">Weight</label>
+                  <label for="weight-kg" class="form__number-label"
+                    >Weight</label
+                  >
                   <div class="form__input-container">
                     <input
                       type="number"
-                      id="weight"
+                      id="weight-kg"
                       class="form__number-input"
-                      name="weight"
+                      name="weight-kg"
                       placeholder="0"
                       min="0"
                     />
                     <p class="form__unit">kg</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form__numbers form__number--imperial hidden">
+                <div>
+                  <label for="height-ft" class="form__number-label"
+                    >Height</label
+                  >
+                  <div class="form__input-container">
+                    <input
+                      type="number"
+                      id="height-ft"
+                      class="form__number-input"
+                      name="height-ft"
+                      placeholder="0"
+                      min="0"
+                    />
+                    <p class="form__unit">ft</p>
+                  </div>
+                  <div class="form__input-container">
+                    <input
+                      type="number"
+                      id="height-in"
+                      class="form__number-input"
+                      name="height-in"
+                      placeholder="0"
+                      min="0"
+                    />
+                    <p class="form__unit">in</p>
+                  </div>
+                </div>
+                <div>
+                  <label for="weight-st" class="form__number-label"
+                    >Weight</label
+                  >
+                  <div class="form__input-container">
+                    <input
+                      type="number"
+                      id="weight-st"
+                      class="form__number-input"
+                      name="weight-st"
+                      placeholder="0"
+                      min="0"
+                    />
+                    <p class="form__unit">st</p>
+                  </div>
+                  <div class="form__input-container">
+                    <input
+                      type="number"
+                      id="weight-lbs"
+                      class="form__number-input"
+                      name="weight-lbs"
+                      placeholder="0"
+                      min="0"
+                    />
+                    <p class="form__unit">lbs</p>
                   </div>
                 </div>
               </div>
