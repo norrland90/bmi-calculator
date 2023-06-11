@@ -289,6 +289,27 @@ section {
   font-size: var(--fs-body-s);
 }
 
+.form__submit {
+  background-color: var(--clr-accent);
+  padding: 0.5em 1em;
+  margin-bottom: 1rem;
+  border: 0;
+  border-radius: 4px;
+  color: var(--clr-light);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+}
+
+.form__submit:hover {
+  background-color: rgb(29, 72, 228);
+  box-shadow: 0px 0px 6px rgba(143, 174, 207, 0.5);
+}
+
+.form__submit:active {
+  background-color: var(--clr-accent);
+  box-shadow: 0px 0px 0px rgba(143, 174, 207, 0.5);
+}
+
 /* Radio buttons styles */
 
 .form__radio-btn {
