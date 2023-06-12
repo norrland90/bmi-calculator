@@ -38,7 +38,7 @@
   --clr-gradient-transparent: linear-gradient(
     135deg,
     hsla(184, 95%, 92%, 0),
-    rgba(215, 231, 254, 0.4)
+    rgba(215, 231, 254, 0.3)
   );
 
   /* Fonts */
@@ -314,7 +314,7 @@ section {
 }
 
 .form__submit {
-  background-color: var(--clr-accent);
+  background-color: rgb(52, 117, 246);
   padding: 0.5em 1em;
   margin-bottom: 1rem;
   border: 0;
@@ -325,7 +325,7 @@ section {
 }
 
 .form__submit:hover {
-  background-color: rgb(29, 72, 228);
+  background-color: var(--clr-accent);
   box-shadow: 0px 0px 6px rgba(143, 174, 207, 0.5);
 }
 
@@ -344,6 +344,11 @@ section {
   border-radius: 50%;
   display: grid;
   place-content: center;
+  cursor: pointer;
+}
+
+.form__radio-btn:hover {
+  border: 1px solid var(--clr-accent);
 }
 
 .form__radio-btn::before {
@@ -472,7 +477,7 @@ section {
 
 @media (min-width: 700px) {
   .advice__main-container {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
 
   .advice__advice-container {
@@ -489,7 +494,7 @@ section {
   .advice__main-container {
     grid-template-columns: repeat(3, 1fr);
 
-    padding: 3rem 5rem; /* obs: padding 5 pga. margin 1 */
+    padding: 4rem 5rem; /* obs: padding 5 pga. margin 1 */
     border-radius: var(--border-radius-l);
   }
 
