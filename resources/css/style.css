@@ -7,7 +7,7 @@
 /* FONTS */
 @font-face {
   font-family: 'Inter';
-  src: url('resources/fonts/Inter-VariableFont_slnt,wght.ttf');
+  src: url('resources/fonts/Inter-VariableFont_slnt,wght.ttf') format('ttf');
 }
 
 /* RESET */
@@ -288,6 +288,7 @@ section {
 .form__unit {
   grid-column: 2 / span 1;
   grid-row: 1;
+  justify-self: end;
 
   padding: 0 1rem;
 
@@ -305,13 +306,29 @@ section {
   border-radius: var(--border-radius-m);
 }
 
+.form__result-intro {
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-semibold);
+  margin-bottom: 0.5rem;
+}
+
 .form__results-heading {
   font-size: var(--fs-heading-m);
   margin-bottom: 1rem;
 }
 
+.form__results-bmi {
+  font-size: var(--fs-heading-xl);
+  margin-bottom: 1rem;
+}
+
 .form__result-info {
   font-size: var(--fs-body-s);
+  line-height: 1.5;
+}
+
+.form__result-info--bold {
+  font-weight: var(--fw-semibold);
 }
 
 .form__submit {
@@ -377,7 +394,15 @@ section {
   }
 
   .form__results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
     border-radius: var(--border-radius-m) 5rem 5rem var(--border-radius-m);
+  }
+
+  .form__results-bmi {
+    margin-bottom: 0;
   }
 }
 
