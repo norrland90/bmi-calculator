@@ -1,9 +1,3 @@
-/* Några anteckningar */
-/* margin-bottom mellan sektioner: 4rem */
-/* Standardpadding på sidorna på stor skärm 6 rem. */
-/* Standardpadding på sidorna på tablet skärm 2 rem. */
-/* Padding på sidorna på 1 rem på vissa ställen. */
-
 /* FONTS */
 @font-face {
   font-family: 'Inter';
@@ -61,8 +55,6 @@
   --border-radius-m: 1rem;
   --border-radius-s: 0.75rem;
   --box-shadow-primary: 16px 32px 56px var(--clr-shadow);
-
-  /* Ev. lägga till padding som custom prop. + media queries */
 }
 
 /* Desktop font sizes */
@@ -99,12 +91,6 @@ section {
 
   margin-bottom: 4rem;
 }
-
-/* .hero__main-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 10rem auto;
-} */
 
 .hero__heading-container {
   grid-row: 1 / span 2;
@@ -149,12 +135,6 @@ section {
     align-items: center;
     gap: 2rem;
   }
-
-  /* .hero__main-container {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: minmax(30rem, auto);
-    align-items: center;
-  } */
 
   .hero__heading-container {
     padding: 4rem 0 2rem 5rem;
@@ -417,8 +397,6 @@ section {
     top: 2rem;
   }
 }
-
-/* Obs: nästa sektion - börja med overall layout så det blir korrekt och tydligt på alla skärmstorleket - blir lättare att hålla koll */
 
 /* RESULT INFO SECTION */
 

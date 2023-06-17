@@ -1,7 +1,3 @@
-// Möjligen finns olika sätt att lösa det med submit-grejen. Har dels gjort en submit-knapp som gör validering och beräkning när man trycker. Men möjligen istället gör så att beräkningen sker "automatiskt" när man trycker in siffrorna - i designen finns ingen submit-knapp.
-
-// const formRadioButtons = document.querySelector('.form__radio-buttons');
-
 const form = document.querySelector('.form');
 const formNumbersMetric = document.querySelector('.form__number--metric');
 const formNumbersImperial = document.querySelector('.form__number--imperial');
@@ -123,5 +119,3 @@ function onSubmit(e) {
 }
 
 form.addEventListener('submit', onSubmit);
-
-// Nästa steg att beräkna idealvikt baserat på längd. Lägga in övre och nedre i en array. Använda patientens längd för detta. Separata funktioner.
